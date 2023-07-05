@@ -1,0 +1,25 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Clients</h1>
+
+<%= link_to new_client_path, class: "btn-block" do %>
+New client 
+<% end %>
+
+
+
+<div id="clients" class="mt-5">
+  <% @clients.each do |client| %>
+    <div class="card mb-3 card1">
+      <div class="card-body card1 shadow rounded">
+        <%= render client %>
+        <p class="card-text">
+          <%= link_to client, class: "btn-block2 btn-sm" do %>
+          Show this client
+        <% end %>
+        
+        </p>
+      </div>
+    </div>
+  <% end %>
+</div>

@@ -1,0 +1,34 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Movies</h1>
+
+<%= link_to new_movie_path, class: "btn-block" do %>
+New movie 
+<% end %>
+
+<!-- <div id="movies">
+  <% @movies.each do |movie| %>
+    <%= render movie %>
+    <p>
+      <%= link_to "Show this movie", movie %>
+    </p>
+  <% end %>
+</div> -->
+
+<div id="movies" class="mt-5">
+  <% @movies.each do |movie| %>
+    <div class="card mb-3 card1">
+      <div class="card-body card1 shadow rounded">
+        <%= render movie %>
+        <p class="card-text">
+          <%= link_to movie, class: "btn-block2 btn-sm" do %>
+          Show this movie
+        <% end %>
+        
+        </p>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+<!-- <%= link_to "New movie", new_movie_path %> -->
